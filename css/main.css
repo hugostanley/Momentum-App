@@ -1,3 +1,33 @@
+html {
+  font-size: 100%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  line-height: 1.4;
+}
+
+ol,
+ul,
+li,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
+main {
+  padding: 8%;
+  height: 100vh;
+  width: 100%;
+}
 
 /*# sourceMappingURL=main.css.map */
