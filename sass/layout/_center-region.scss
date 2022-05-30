@@ -12,6 +12,13 @@
       text-align: center;
    }
 
+   p {
+      text-align: center;
+      font-style: italic;
+   }
+}
+
+form {
    input {
       border-style: none;
       border-bottom: 2px solid white;
@@ -19,16 +26,19 @@
       width: 80%;
    }
 
-   label {
+   label,
+   input {
       text-align: center;
+      font-size: large;
+   }
+
+   .label.name,
+   .input.name {
+      visibility: visible;
    }
    .input.focus,
    .label.focus {
-      visibility: hidden;
-   }
-
-   p {
-      text-align: center;
-      font-style: italic;
+      visibility: visible;
+      display: none;
    }
 }
