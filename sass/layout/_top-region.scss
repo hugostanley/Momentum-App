@@ -1,0 +1,11 @@
+@use '../abstracts/variables' as *;
+
+.top-region {
+   span {
+      font-size: 1.5em;
+   }
+   p {
+      font-weight: 500;
+      font-size: $primary-font-size_small;
+   }
+}

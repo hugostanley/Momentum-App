@@ -1,0 +1,105 @@
+@use './maps' as *;
+
+@each $prop, $value in $flex-box {
+   @if ($prop == display) {
+      @each $proper, $val in $value {
+         .#{$proper} {
+            display: $val;
+         }
+      }
+   }
+
+   @if ($prop == flex-d) {
+      @each $proper, $val in $value {
+         .#{$proper} {
+            flex-direction: $val;
+         }
+      }
+   }
+
+   @if ($prop == flex-w) {
+      @each $proper, $val in $value {
+         .#{$proper} {
+            flex-wrap: $val;
+         }
+      }
+   }
+
+   @if ($prop == justify-c) {
+      @each $proper, $val in $value {
+         .#{$proper} {
+            justify-content: $val;
+         }
+      }
+   }
+
+   @if ($prop == align-i) {
+      @each $proper, $val in $value {
+         .#{$proper} {
+            align-items: $val;
+         }
+      }
+   }
+
+   @if ($prop == align-s) {
+      @each $proper, $val in $value {
+         .#{$proper} {
+            align-self: $val;
+         }
+      }
+   }
+}
+
+// To use the code below @include flex(jc--c);
+
+// @mixin flex($flex-prop) {
+//    @each $prop, $value in $flex-box {
+//       @if ($flex-prop == d--f) {
+//          @if ($prop == display) {
+//             @each $proper, $val in $value {
+//                display: $val;
+//             }
+//          }
+//       }
+
+//       @if ($prop == flex-d) {
+//          @each $proper, $val in $value {
+//             @if ($flex-prop == $proper) {
+//                flex-direction: $val;
+//             }
+//          }
+//       }
+
+//       @if ($prop == flex-w) {
+//          @each $proper, $val in $value {
+//             @if ($flex-prop == $proper) {
+//                flex-wrap: $val;
+//             }
+//          }
+//       }
+
+//       @if ($prop == justify-c) {
+//          @each $proper, $val in $value {
+//             @if ($flex-prop == $proper) {
+//                justify-content: $val;
+//             }
+//          }
+//       }
+
+//       @if ($prop == align-i) {
+//          @each $proper, $val in $value {
+//             @if ($flex-prop == $proper) {
+//                align-items: $val;
+//             }
+//          }
+//       }
+
+//       @if ($prop == align-s) {
+//          @each $proper, $val in $value {
+//             @if ($flex-prop == $proper) {
+//                align-self: $val;
+//             }
+//          }
+//       }
+//    }
+// }

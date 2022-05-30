@@ -17,32 +17,35 @@
          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
       />
       <link rel="stylesheet" href="./css/main.css" />
-      <script src="./scripts/scripts.js"></script>
+      <script src="./scripts/scripts.js" defer></script>
       <title>Momentum App</title>
    </head>
    <body>
       <main>
-         <section class="current-weather">
+         <section class="top-region d--f ai--fe fd--c">
             <div class="current-weather_icon">
-               <span class="material-symbols-outlined"> sunny </span>
+               <span class="material-symbols-outlined sun-logo"> sunny </span>
                <span class="current-weather_temp">25°</span>
             </div>
             <p class="current-weather_loc">Quezon City</p>
          </section>
-         <section class="center-region">
-            <div class="center-region_time-greet">
+         <section class="center-region d--f fd--c jc--se ai--c">
+            <div class="center-region_time-greet d--f fd--c ai--c">
                <h1 class="center-region_time">2:00</h1>
-               <span class="center-region_greet">Hello, Philippines</span>
+               <span class="center-region_greet">Good Afternoon, Stanley</span>
             </div>
-            <div>
-               <form action="">
-                  <input type="text" />
-                  <input type="text" />
-               </form>
-               <p>'Lorem ipsum dolor sit amet consectetur adipisicing elit.'</p>
-            </div>
+
+            <form action="" class="d--f fd--c ai--c">
+               <label for="name">What is your name?</label>
+               <input id="name" class="input name" type="text" />
+               <label class="label focus" for="focus"
+                  >What is your main focus for today?</label
+               >
+               <input id="focus" class="input focus" type="text" />
+            </form>
+            <p>"Don't let yesterday take too much of today"</p>
          </section>
-         <section>
+         <section class="bottom-region d--f jc--sb">
             <div>
                <span class="material-symbols-outlined"> contrast </span>
             </div>

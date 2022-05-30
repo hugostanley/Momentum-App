@@ -1,0 +1,34 @@
+$flex-box: (
+   display: (
+      d--f: flex,
+   ),
+   flex-d: (
+      fd--r: row,
+      fd--c: column,
+      fd--rr: row-reverse,
+      fd--cr: column-reverse,
+   ),
+   flex-w: (
+      fw--w: wrap,
+   ),
+   justify-c: (
+      jc--c: center,
+      jc--fe: flex-end,
+      jc--fs: flex-start,
+      jc--sa: space-around,
+      jc--sb: space-between,
+      jc--se: space-evenly,
+   ),
+   align-i: (
+      ai--fs: flex-start,
+      ai--fe: flex-end,
+      ai--c: center,
+   ),
+   align-s: (
+      as--fs: flex-start,
+      as--c: center,
+      as--fe: flex-end,
+      as--s: stretch,
+      as--b: baseline,
+   ),
+);
