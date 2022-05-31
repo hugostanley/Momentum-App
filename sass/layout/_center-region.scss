@@ -33,16 +33,18 @@ form {
    }
 }
 
-// .label.name,
-// .input.name {
-//    visibility: hidden;
-//    opacity: 1;
-//    transition: visibility 0s, opacity 0.5s linear;
-//    //   display: none;
-// }
-// .input.focus,
-// .label.focus {
-//    visibility: visible;
-//    opacity: 1;
-//    transition: visibility 0s, opacity 0.5s linear;
-// }
+.focus-text {
+   span {
+      font-size: $primary-font-size_small;
+   }
+}
+
+.quotes {
+   .refresh {
+      font-size: $primary-font-size_small;
+      // margin-left: 2%;
+      // margin-top: 2%;
+      color: rgb(221, 221, 221);
+      cursor: pointer;
+   }
+}
