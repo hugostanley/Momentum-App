@@ -8,6 +8,14 @@
          rel="stylesheet"
          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
       />
+
+      <!-- <span class="material-symbols-outlined">
+         arrow_forward_ios
+      </span> -->
+      <link
+         rel="stylesheet"
+         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+      />
       <link
          href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
          rel="stylesheet"
@@ -22,6 +30,7 @@
    </head>
    <body>
       <main>
+         <!--Top Region-->
          <section class="top-region d--f ai--fe fd--c">
             <div class="current-weather_icon">
                <span class="material-symbols-outlined sun-logo"> sunny </span>
@@ -29,27 +38,36 @@
             </div>
             <p class="current-weather_loc">Quezon City</p>
          </section>
-         <section class="center-region d--f fd--c jc--se ai--c">
-            <div class="center-region_time-greet d--f fd--c ai--c">
-               <h1 class="center-region_time">2:00</h1>
+
+         <!--Center Region-->
+         <section class="center-region d--f fd--c jc--sa ai--c">
+            <div class="center-region_clock-greet d--f fd--c ai--c">
+               <h1 class="center-region_clock">2:00</h1>
                <span class="center-region_greet greet">Good</span>
             </div>
 
-            <form action="/" method="get" class="d--f fd--c ai--c jc--fs">
-               <label class="label name" for="name">What is your name?</label>
-               <input
-                  id="name"
-                  class="input name"
-                  type="text"
-                  name="username"
-               />
-               <label class="label focus" for="focus"
-                  >What is your main focus for today?</label
-               >
-               <input id="focus" class="input focus" type="text" />
-            </form>
+            <dialog open class="modal name">
+               <form method="dialog" class="d--f fd--c ai--c jc--sa">
+                  <label class="label name" for="name">What is your name?</label>
+                  <input id="name" class="input name" type="text" name="username" />
+               </form>
+            </dialog>
+
+            <dialog class="modal focus">
+               <form method="dialog" class="d--f fd--c ai--c jc--sa">
+                  <label class="label focus" for="focus">What is your main focus for today?</label>
+                  <input id="focus" class="input focus" type="text" />
+               </form>
+            </dialog>
+            <dialog class="modal focus-text">
+               <span><strong>Today</strong></span
+               ><br />
+               <span class="focusText"></span>
+            </dialog>
             <p>"Don't let yesterday take too much of today"</p>
          </section>
+
+         <!--Bottom Region-->
          <section class="bottom-region d--f jc--sb">
             <div>
                <span class="material-symbols-outlined"> contrast </span>

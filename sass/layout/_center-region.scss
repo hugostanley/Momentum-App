@@ -2,7 +2,7 @@
 .center-region {
    height: 88%;
 
-   .center-region_time {
+   .center-region_clock {
       font-size: $primary-font-size_big;
       font-weight: 400;
    }
@@ -31,14 +31,18 @@ form {
       text-align: center;
       font-size: large;
    }
-
-   .label.name,
-   .input.name {
-      visibility: visible;
-   }
-   .input.focus,
-   .label.focus {
-      visibility: visible;
-      display: none;
-   }
 }
+
+// .label.name,
+// .input.name {
+//    visibility: hidden;
+//    opacity: 1;
+//    transition: visibility 0s, opacity 0.5s linear;
+//    //   display: none;
+// }
+// .input.focus,
+// .label.focus {
+//    visibility: visible;
+//    opacity: 1;
+//    transition: visibility 0s, opacity 0.5s linear;
+// }
