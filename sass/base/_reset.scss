@@ -4,7 +4,9 @@ html {
    scroll-behavior: smooth;
 }
 
-* {
+*,
+*::after,
+*::before {
    box-sizing: border-box;
    margin: 0;
    padding: 0;
@@ -12,9 +14,6 @@ html {
    color: white;
    letter-spacing: 0.01em;
    font-family: 'Lato', sans-serif;
-   &:focus {
-      outline: none;
-   }
 }
 
 body {
@@ -28,4 +27,9 @@ a {
    list-style: none;
    text-decoration: none;
    color: black;
+}
+
+input:focus {
+   outline: none;
+   background: none;
 }

@@ -1,4 +1,60 @@
 .todo-btn {
-    cursor: pointer;
-    font-weight: bold;
+   cursor: pointer;
+   font-weight: bold;
+}
+
+.todo-modal {
+   min-width: 17rem;
+   min-height: 13rem;
+   max-height: 13rem;
+   border-radius: 5%;
+   background-color: rgba(0, 0, 0, 0.925);
+
+   form {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 2rem;
+   }
+}
+
+.todo.input {
+   min-width: 12rem;
+   text-align: left;
+   font-size: 1em;
+   padding-bottom: 3%;
+}
+
+.todo-header {
+   padding: 8%;
+}
+
+button {
+   border: none;
+   background: none;
+
+   span {
+      color: rgb(175, 175, 175);
+   }
+}
+
+.todo-item {
+   color: white;
+   flex: 2;
+   text-align: left;
+}
+
+.todo-list {
+   min-width: 80%;
+   overflow: auto;
+   max-height: 5rem;
+   scroll-behavior: smooth;
+   
+}
+
+.todo {
+   width: 80%;
+   margin: 0.5rem;
+   justify-content: space-between;
+   align-items: center;
+   font-size: 1em;
 }
