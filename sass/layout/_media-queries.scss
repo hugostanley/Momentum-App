@@ -1,0 +1,83 @@
+@media all and (min-width: 768px) {
+   main {
+      padding: 5%;
+   }
+   .center-region {
+      .center-region_clock {
+         font-size: 18vw;
+      }
+
+      .center-region_greet {
+         font-size: 5vw;
+      }
+      form {
+         margin-top: 8%;
+         label,
+         input {
+            text-align: center;
+            font-size: 4vw;
+         }
+      }
+
+      .quotes {
+         font-size: 3vw;
+         margin-top: 15%;
+      }
+   }
+   .todo-modal {
+      left: 55%;
+   }
+}
+
+@media all and (min-width: 1024px) {
+   main {
+      padding: 3%;
+   }
+   .center-region {
+      .center-region_clock {
+         font-size: 10vw;
+      }
+
+      .center-region_greet {
+         font-size: 3vw;
+      }
+      form {
+         margin-top: 2%;
+         .label.name,
+         .input.name,
+         .label.focus,
+         .input.focus {
+            font-size: 2.8vw;
+         }
+         label,
+         input {
+            text-align: center;
+            font-size: 4vw;
+         }
+      }
+
+      .quotes {
+         font-size: 2vw;
+         margin-top: 15%;
+      }
+   }
+   .todo-modal {
+      top: 46%;
+      left: 75%;
+      min-width: 20vw;
+      min-height: 40vh;
+
+      form {
+          width: 85%;
+          input {
+              
+              text-align: left;
+          }
+      }
+   }
+
+   .todo-list {
+       min-height: 10rem;
+   }
+
+}

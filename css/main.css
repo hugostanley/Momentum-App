@@ -114,6 +114,41 @@ input:focus {
   align-self: baseline;
 }
 
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fade-out {
+  100% {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0;
+  }
+}
+dialog {
+  background-color: transparent;
+  border-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  top: 55vh;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.modal.focus[open] {
+  animation: fade-in 500ms forwards;
+}
+
+.modal.focus-text[open] {
+  animation: fade-in 500ms forwards;
+}
+
 main {
   padding: 8%;
   height: 100vh;
@@ -137,11 +172,11 @@ main {
   height: 88%;
 }
 .center-region .center-region_clock {
-  font-size: 4rem;
+  font-size: 25vw;
   font-weight: 400;
 }
 .center-region .center-region_greet {
-  font-size: 1.8rem;
+  font-size: 9vw;
   text-align: center;
 }
 .center-region p {
@@ -229,39 +264,80 @@ button span {
   font-size: 1em;
 }
 
-@keyframes fade-in {
-  0% {
-    opacity: 0;
+@media all and (min-width: 768px) {
+  main {
+    padding: 5%;
   }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes fade-out {
-  100% {
-    opacity: 1;
-  }
-  0% {
-    opacity: 0;
-  }
-}
-dialog {
-  background-color: transparent;
-  border-style: none;
-  margin-left: auto;
-  margin-right: auto;
-  top: 55vh;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
 
-.modal.focus[open] {
-  animation: fade-in 500ms forwards;
-}
+  .center-region .center-region_clock {
+    font-size: 18vw;
+  }
+  .center-region .center-region_greet {
+    font-size: 5vw;
+  }
+  .center-region form {
+    margin-top: 8%;
+  }
+  .center-region form label,
+.center-region form input {
+    text-align: center;
+    font-size: 4vw;
+  }
+  .center-region .quotes {
+    font-size: 3vw;
+    margin-top: 15%;
+  }
 
-.modal.focus-text[open] {
-  animation: fade-in 500ms forwards;
+  .todo-modal {
+    left: 55%;
+  }
+}
+@media all and (min-width: 1024px) {
+  main {
+    padding: 3%;
+  }
+
+  .center-region .center-region_clock {
+    font-size: 10vw;
+  }
+  .center-region .center-region_greet {
+    font-size: 3vw;
+  }
+  .center-region form {
+    margin-top: 2%;
+  }
+  .center-region form .label.name,
+.center-region form .input.name,
+.center-region form .label.focus,
+.center-region form .input.focus {
+    font-size: 2.8vw;
+  }
+  .center-region form label,
+.center-region form input {
+    text-align: center;
+    font-size: 4vw;
+  }
+  .center-region .quotes {
+    font-size: 2vw;
+    margin-top: 15%;
+  }
+
+  .todo-modal {
+    top: 46%;
+    left: 75%;
+    min-width: 20vw;
+    min-height: 40vh;
+  }
+  .todo-modal form {
+    width: 85%;
+  }
+  .todo-modal form input {
+    text-align: left;
+  }
+
+  .todo-list {
+    min-height: 10rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */
