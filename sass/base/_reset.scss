@@ -33,3 +33,9 @@ input:focus {
    outline: none;
    background: none;
 }
+
+input {
+   border: none;
+   border-bottom: 2px solid white;
+   background: transparent;
+}

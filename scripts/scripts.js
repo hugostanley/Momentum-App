@@ -17,11 +17,12 @@ let focusText = document.querySelector('.focusText')
 // Quote Randomizer Selectors
 const refresh = document.querySelector('.refresh-icon')
 const para = document.querySelector('.text-quote')
+const customBtn = document.querySelector('.custom')
 let quotes = [
    '"Don\'t let yesterday take too much of today."',
    '"Happiness is not the absence of problems, it is the ability to deal with them."',
    '"There is nothing that works out for the worst that won\'t work out for the better."',
-   '"The hardes shot you\'d ever take is the one that you didn\'t take."',
+   '"The hardest shot you\'d ever take is the one that you didn\'t take."',
 ]
 
 // Even Listeners
@@ -115,8 +116,6 @@ function addToDo() {
    ul.appendChild(todoDiv)
 }
 
-
-
 todoBtn.addEventListener('click', openTodo)
 closeBtn.addEventListener('click', closeTodo)
 
@@ -126,4 +125,25 @@ function openTodo() {
 
 function closeTodo() {
    todoModal.close()
+}
+
+customBtn.addEventListener('click', customize)
+
+function customize() {
+   para.style.display = 'none'
+
+   const inputElem = document.createElement('input')
+   const quoteDiv = document.querySelector('.quote-container')
+   quoteDiv.insertBefore(inputElem, quoteDiv.children[0])
+
+   inputElem.addEventListener('keypress', inputNewQuote)
+
+   function inputNewQuote(e) {
+      if (e.key === 'Enter') {
+         let newQuote = inputElem.value
+         para.textContent = `\"${newQuote}\"`
+         inputElem.style.display = 'none'
+         para.style.display = 'block'
+      }
+   }
 }
