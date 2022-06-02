@@ -1,3 +1,5 @@
+@use '../components/animation' as *;
+
 .todo-btn {
    cursor: pointer;
    font-weight: bold;
@@ -17,15 +19,17 @@
    }
 }
 
-.todo.input {
+
+
+.todo-header {
+   padding: 8%;
+}
+
+.todo-input {
    min-width: 12rem;
    text-align: left;
    font-size: 1em;
    padding-bottom: 3%;
-}
-
-.todo-header {
-   padding: 8%;
 }
 
 button {
@@ -48,7 +52,6 @@ button {
    overflow: auto;
    max-height: 5rem;
    scroll-behavior: smooth;
-   
 }
 
 .todo {
@@ -57,4 +60,29 @@ button {
    justify-content: space-between;
    align-items: center;
    font-size: 1em;
+}
+
+.close {
+   cursor: pointer;
+}
+
+
+
+.todo-modal {
+   background-color: rgba(0, 0, 0, 0.938);
+   border-style: none;
+   margin-left: auto;
+   margin-right: auto;
+   top: 55vh;
+   left: 0;
+   right: 0;
+   text-align: center;
+}
+
+.modal__focus[open] {
+   animation: fade-in 500ms forwards;
+}
+
+.modal.focus-text[open] {
+   animation: fade-in 500ms forwards;
 }

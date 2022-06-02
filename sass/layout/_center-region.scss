@@ -1,44 +1,53 @@
 @use '../abstracts/variables' as *;
+// default styling
 .center-region {
-   height: 88%;
-
-   .center-region_clock {
-      font-size: $primary-font-size_big;
-      font-weight: 400;
-   }
-
-   .center-region_greet {
-      font-size: $secondary-font-size_big;
-      text-align: center;
-   }
-
+   height: 85%;
+   gap: 5rem;
    p {
       text-align: center;
       font-style: italic;
    }
+
+   dialog {
+      position: inherit;
+      background-color: transparent;
+      border-style: none;
+     
+   }
 }
 
-form {
-   input {
-      border-style: none;
-      border-bottom: 2px solid white;
-      background-color: transparent;
-      width: 80%;
+// Greet & Clock styling
+.center-region-main {
+   .center-region__clock {
+      font-size: $primary-font-size_big;
+      font-weight: 400;
    }
 
+   .center-region__greet {
+      font-size: $secondary-font-size_big;
+      text-align: center;
+   }
+}
+
+// Dialog Modal INput styling
+.modal-form {
    label,
    input {
       text-align: center;
-      font-size: large;
+      font-size: 6vw;
+      width: 80%;
    }
 }
 
-.focus-text {
-   span {
-      font-size: $primary-font-size_small;
-   }
+// Dialog Modal output Styling
+.modal__focus--output {
+   width: 80%;
+   text-align: center;
+   font-size: 1.3rem;
 }
 
+
+// Quotes Styling
 .quotes {
    .refresh {
       font-size: $primary-font-size_small;

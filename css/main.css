@@ -136,38 +136,22 @@ input {
     opacity: 0;
   }
 }
-dialog {
-  background-color: transparent;
-  border-style: none;
-  margin-left: auto;
-  margin-right: auto;
-  top: 55vh;
-  left: 0;
-  right: 0;
-  text-align: center;
-}
-
-.modal.focus[open] {
-  animation: fade-in 500ms forwards;
-}
-
-.modal.focus-text[open] {
-  animation: fade-in 500ms forwards;
-}
-
 main {
-  padding: 8%;
+  padding: 7%;
   height: 100vh;
-  max-height: 100%;
-  min-height: 100%;
+  max-height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-image: url("/images/sunrise.jpg");
   background-position: center;
   background-size: cover;
 }
 
-.top-region span {
-  font-size: 1.5em;
+.top-region .weather__temp {
+  font-size: 1.6rem;
+}
+.top-region .weather__icon {
+  font-size: 1.4rem;
 }
 .top-region p {
   font-weight: 500;
@@ -175,35 +159,39 @@ main {
 }
 
 .center-region {
-  height: 88%;
-}
-.center-region .center-region_clock {
-  font-size: 25vw;
-  font-weight: 400;
-}
-.center-region .center-region_greet {
-  font-size: 9vw;
-  text-align: center;
+  height: 85%;
+  gap: 5rem;
 }
 .center-region p {
   text-align: center;
   font-style: italic;
 }
-
-form input {
-  border-style: none;
-  border-bottom: 2px solid white;
+.center-region dialog {
+  position: inherit;
   background-color: transparent;
+  border-style: none;
+}
+
+.center-region-main .center-region__clock {
+  font-size: 25vw;
+  font-weight: 400;
+}
+.center-region-main .center-region__greet {
+  font-size: 9vw;
+  text-align: center;
+}
+
+.modal-form label,
+.modal-form input {
+  text-align: center;
+  font-size: 6vw;
   width: 80%;
 }
-form label,
-form input {
-  text-align: center;
-  font-size: large;
-}
 
-.focus-text span {
-  font-size: 1rem;
+.modal__focus--output {
+  width: 80%;
+  text-align: center;
+  font-size: 1.3rem;
 }
 
 .quotes .refresh {
@@ -233,15 +221,15 @@ form input {
   left: 2rem;
 }
 
-.todo.input {
+.todo-header {
+  padding: 8%;
+}
+
+.todo-input {
   min-width: 12rem;
   text-align: left;
   font-size: 1em;
   padding-bottom: 3%;
-}
-
-.todo-header {
-  padding: 8%;
 }
 
 button {
@@ -273,15 +261,38 @@ button span {
   font-size: 1em;
 }
 
+.close {
+  cursor: pointer;
+}
+
+.todo-modal {
+  background-color: rgba(0, 0, 0, 0.938);
+  border-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  top: 55vh;
+  left: 0;
+  right: 0;
+  text-align: center;
+}
+
+.modal__focus[open] {
+  animation: fade-in 500ms forwards;
+}
+
+.modal.focus-text[open] {
+  animation: fade-in 500ms forwards;
+}
+
 @media all and (min-width: 768px) {
   main {
     padding: 5%;
   }
 
-  .center-region .center-region_clock {
+  .center-region .center-region__clock {
     font-size: 18vw;
   }
-  .center-region .center-region_greet {
+  .center-region .center-region__greet {
     font-size: 5vw;
   }
   .center-region form {
@@ -306,29 +317,33 @@ button span {
     padding: 3%;
   }
 
-  .center-region .center-region_clock {
+  .center-region {
+    gap: 1rem;
+  }
+  .center-region .center-region__clock {
     font-size: 10vw;
   }
-  .center-region .center-region_greet {
+  .center-region .center-region__greet {
     font-size: 3vw;
   }
   .center-region form {
     margin-top: 2%;
   }
-  .center-region form .label.name,
-.center-region form .input.name,
-.center-region form .label.focus,
-.center-region form .input.focus {
-    font-size: 2.8vw;
+  .center-region form .modal__focus--input,
+.center-region form .modal__focus--label,
+.center-region form .modal__username--input,
+.center-region form .modal__username--label {
+    font-size: 2.1vw;
   }
-  .center-region form label,
-.center-region form input {
-    text-align: center;
-    font-size: 4vw;
+  .center-region .modal__focus--output {
+    font-size: 2rem;
   }
   .center-region .quotes {
     font-size: 2vw;
-    margin-top: 15%;
+    margin-top: 2%;
+  }
+  .center-region .modal__username--label {
+    width: 15rem;
   }
 
   .todo-modal {
@@ -345,7 +360,11 @@ button span {
   }
 
   .todo-list {
-    min-height: 10rem;
+    min-height: 8rem;
+  }
+
+  .todo-input {
+    font-size: 1em;
   }
 }
 

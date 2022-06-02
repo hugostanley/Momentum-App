@@ -2,17 +2,17 @@
 let currentTime = new Date()
 let hours = currentTime.getHours()
 let minutes = (currentTime.getMinutes() < 10 ? '0' : '') + currentTime.getMinutes()
-let main = document.querySelector('main')
-let clock = document.querySelector('.center-region_clock')
-let greetText = document.querySelector('.greet')
+let main = document.querySelector('[data-main]')
+let clock = document.querySelector('[data-clock')
+let greetText = document.querySelector('[data-greet]')
 
 // Name and Focus input Selectors
-const nameModal = document.querySelector('.modal.name')
-const focusModal = document.querySelector('.modal.focus')
-const inputName = document.querySelector('.input.name')
-const inputFocus = document.querySelector('.input.focus')
-const focusTextModal = document.querySelector('.modal.focus-text')
-let focusText = document.querySelector('.focusText')
+const nameModal = document.querySelector('[data-username]')
+const focusModal = document.querySelector('[data-focus]')
+const inputName = document.querySelector('[data-username-input]')
+const inputFocus = document.querySelector('[data-focus-input]')
+const focusTextModal = document.querySelector('[data-focus-output]')
+let focusText = document.querySelector('[data-focus-output-text]')
 
 // Quote Randomizer Selectors
 const refresh = document.querySelector('.refresh-icon')
@@ -105,14 +105,23 @@ function addToDo() {
    todoDiv.appendChild(newTodo)
    // complete button
    const compBtn = document.createElement('button')
-   compBtn.innerHTML = '<span class="material-symbols-outlined"> done </span>'
+   compBtn.innerHTML = '<span class="material-symbols-outlined completed"> done </span>'
    compBtn.classList.add('compBtn')
    todoDiv.appendChild(compBtn)
+
+   compBtn.addEventListener('click', () => {
+      newTodo.style.textDecoration = 'line-through'
+   })
+
    // trash btn
    const trashBtn = document.createElement('button')
-   trashBtn.innerHTML = '<span class="material-symbols-outlined"> delete </span>'
+   trashBtn.innerHTML = '<span class="material-symbols-outlined deleted"> delete </span>'
    trashBtn.classList.add('trashBtn')
    todoDiv.appendChild(trashBtn)
+
+   trashBtn.addEventListener('click', () => {
+      todoDiv.style.display = 'none'
+   })
    ul.appendChild(todoDiv)
 }
 

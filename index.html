@@ -4,75 +4,72 @@
       <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <link
-         rel="stylesheet"
-         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
-      />
-      <link
-         href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
-         rel="stylesheet"
-      />
-
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+      <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap" rel="stylesheet" />
       <link rel="stylesheet" href="css/main.css" />
       <script src="./scripts/scripts.js" defer></script>
       <title>Momentum App</title>
    </head>
    <body>
-      <main>
-         <!--Top Region-->
+      <main data-main>
+         <!--TOP REGION-->
          <section class="top-region d--f ai--fe fd--c">
-            <div class="current-weather_icon">
-               <span class="material-symbols-outlined sun-logo"> sunny </span>
-               <span class="current-weather_temp">25°</span>
-            </div>
-            <p class="current-weather_loc">Quezon City</p>
+            <span class="weather__temp">
+               <span class="material-symbols-outlined weather__icon"> sunny </span>
+               25°
+            </span>
+            <p>Quezon City</p>
          </section>
 
-         <!--Center Region-->
-         <section class="center-region d--f fd--c jc--sa ai--c">
-            <div class="center-region_clock-greet d--f fd--c ai--c">
-               <h1 class="center-region_clock">2:00</h1>
-               <span class="center-region_greet greet"></span>
+         <!--CENTER REGION-->
+         <section class="center-region d--f fd--c jc--c ai--c">
+            <!--Clock and Greeting-->
+            <div class="center-region-main d--f fd--c ai--c">
+               <h1 class="center-region__clock" data-clock>2:00</h1>
+               <span class="center-region__greet" data-greet></span>
             </div>
 
-            <dialog open class="modal name">
-               <form method="dialog" class="d--f fd--c ai--c jc--sa">
-                  <label class="label name" for="name">What is your name?</label>
-                  <input id="name" class="input name" type="text" name="username" />
+            <!--Username Input-->
+            <dialog open class="modal modal__username" data-username>
+               <form method="dialog" class="modal-form d--f fd--c ai--c jc--sa">
+                  <label class="modal__username--label" for="name">What is your name?</label>
+                  <input class="modal__username--input" id="name" type="text" name="username" data-username-input />
                </form>
             </dialog>
 
-            <dialog class="modal focus">
-               <form method="dialog" class="d--f fd--c ai--c jc--sa">
-                  <label class="label focus" for="focus">What is your main focus for today?</label>
-                  <input id="focus" class="input focus" type="text" />
+            <!--User's focus activity Input-->
+            <dialog class="modal modal__focus" data-focus>
+               <form method="dialog" class="modal-form d--f fd--c ai--c jc--sa">
+                  <label class="modal__focus--label" for="focus">What is your main focus for today?</label>
+                  <input class="modal__focus--input" id="focus" type="text" data-focus-input />
                </form>
             </dialog>
-            <dialog class="modal focus-text">
-               <span><strong>Today</strong></span
+
+            <!--Focus Activity output/display-->
+            <dialog class="modal modal__focus--output" data-focus-output>
+               <span><strong>Today's Focus</strong></span
                ><br />
-
-               <span class="focusText"></span>
+               <span data-focus-output-text></span>
             </dialog>
 
+            <!--Random and Custom Quotes-->
             <div class="quotes d--f fd--c ai--c">
                <div class="d--f jc--sb quote-container">
                   <p class="text-quote">"Hakuna Matata!"</p>
-                  <a class="custom" href="#"
-                     ><span class="material-symbols-outlined customize-icon ai--fs"> border_color </span></a
-                  >
+                  <a class="custom" href="#"><span class="material-symbols-outlined customize-icon ai--fs"> border_color </span></a>
                </div>
-               <a class="refresh-icon" href="#"
-                  ><span class="material-symbols-outlined refresh"> autorenew </span></a
-               >
+               <a class="refresh-icon" href="#"><span class="material-symbols-outlined refresh"> autorenew </span></a>
             </div>
          </section>
 
-         <!--Bottom Region-->
+         <!--BOTTOM REGION-->
          <section class="bottom-region d--f jc--sb">
+            <!--Theme settings-->
             <div>
                <a href="#"><span class="material-symbols-outlined"> contrast </span></a>
             </div>
+
+            <!--ToDo List Toggle-->
             <div>
                <span class="todo-btn">Todo</span>
                <dialog class="todo-modal">
